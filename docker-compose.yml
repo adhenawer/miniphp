@@ -9,7 +9,7 @@ services:
         image: tianon/true
         volumes:
             # put your project folder
-            - ~/code/:/var/www/html
+            - ../:/var/www/html
 
 ### PHP 7.0 Container ###########################
 
@@ -56,7 +56,7 @@ services:
             - ./volumes/logs/nginx/:/var/log/nginx
             - ./nginx/sites/:/etc/nginx/sites-available
         ports:
-            - "80:80"
+            - "8080:80"
             - "443:443"
         links:
             - php-fpm70
@@ -136,7 +136,7 @@ services:
             MYSQL_PASSWORD: docker
             MYSQL_ROOT_PASSWORD: docker
         ports:
-            - "8080:80"
+            - "8081:80"
         links:
             - "mysql:db"
 

@@ -42,7 +42,8 @@ RUN wget -O /etc/apk/keys/php-alpine.rsa.pub \
         php7-opcache \
         php7-openssl \
         php7-zlib \
-        php7-xdebug
+        php7-xdebug \
+        php7-ctype
 
 RUN ln /usr/bin/php7 /usr/bin/php
 
